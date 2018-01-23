@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tutorial 1 - Positions</title>
+        <style>
+            #myBG {
+                position:fixed;
+                left:0px;
+                top:0px;
+                width:100vw;
+                height:100vh;
+                object-fit:cover;
+                object-position:center;
+            }
+            
+            #controls {
+                position:absolute;
+                left:0px;
+                top:15vh;
+            }
+            
+            #img1 {
+                background-image:url(1.png);
+            }
+            #img2 {
+                left:30px;
+                background-image:url(2.png);
+            }
+            #img3 {
+                left:30px;
+                background-image:url(3.png); 
+            }
+            #img4 {
+                background-image:url(4.png);               
+            }
+            
+            .thumbnails {
+                width:75px;
+                height:75px;
+                background-color:red;
+                position:relative;
+                margin:30px;
+                background-size:cover;
+                background-position:center;
+                opacity:0.5;
+                border-radius:75px;
+                border:2px solid #FFF;
+                transition:opacity 2s;
+                cursor:pointer;                
+            }
+            
+            .thumbnails:hover {
+                opacity:1;
+            }
+            
+            #info {
+                opacity:0;
+                position:absolute;
+                right:0px;
+                top:0px;
+                bottom:0px;
+                margin:auto;
+                height:50vh;
+                width:60vw;
+                background-color:rgba(255,255,255,0.9);
+                transition:opacity 2s;
+            }
+            
+            #infoimg {
+                width:100%;
+                height:80%;
+            }
+            
+            #infotext {
+                width:100%;
+                height:20%;
+                padding:10px;
+            }
+            
+            #close {
+                position:absolute;
+                width:25px;
+                height:25px;
+                background-image:url(x.png);
+                left:-12px;
+                top:-12px;
+                cursor:pointer;
+            }
+        </style>
+    </head>
+    
+    <body>
+    
+        <video id="myBG" autoplay loop>
+            <source src="5.mp4" />
+        </video>
+        
+        <div id="controls">
+            <div id="img1" class="thumbnails"></div>
+            <div id="img2" class="thumbnails"></div>
+            <div id="img3" class="thumbnails"></div>
+            <div id="img4" class="thumbnails"></div>
+        </div>
+        
+        <div id="info">
+            <div id="infoimg"></div>
+            <div id="infotext"></div>
+            <div id="close"></div>
+        </div>
+        
+        <script>
+            document.getElementById("img1").addEventListener("click", function(){
+                document.getElementById("infoimg").style.backgroundImage = "url(1.png)";
+                document.getElementById("infoimg").style.backgroundSize = "cover";
+                document.getElementById("infoimg").style.backgroundPosition = "center center";
+                document.getElementById("info").style.opacity = "1";
+                document.getElementById("infotext").innerHTML = "Painting found in the weird mansion.";
+            });
+            
+            document.getElementById("img2").addEventListener("click", function(){
+                document.getElementById("infoimg").style.backgroundImage = "url(2.png)";
+                document.getElementById("infoimg").style.backgroundSize = "cover";
+                document.getElementById("infoimg").style.backgroundPosition = "center center";
+                document.getElementById("info").style.opacity = "1";
+                document.getElementById("infotext").innerHTML = "Creepy psychotic maniac.";
+            });
+            
+            document.getElementById("img3").addEventListener("click", function(){
+                document.getElementById("infoimg").style.backgroundImage = "url(3.png)";
+                document.getElementById("infoimg").style.backgroundSize = "cover";
+                document.getElementById("infoimg").style.backgroundPosition = "center center";
+                document.getElementById("info").style.opacity = "1";
+                document.getElementById("infotext").innerHTML = "Where you live (hopefully).";
+            });
+            
+            document.getElementById("img4").addEventListener("click", function(){
+                document.getElementById("infoimg").style.backgroundImage = "url(4.png)";
+                document.getElementById("infoimg").style.backgroundSize = "cover";
+                document.getElementById("infoimg").style.backgroundPosition = "center center";
+                document.getElementById("info").style.opacity = "1";
+                document.getElementById("infotext").innerHTML = "A beautiful sunset.";
+            });
+            
+            document.getElementById("close").addEventListener("click", function(){
+                document.getElementById("info").style.opacity = 0;
+            });
+        </script>
+    </body>
+</html>
