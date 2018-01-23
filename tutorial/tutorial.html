@@ -109,58 +109,55 @@
         </div>
         
         <script>
-            function reset()
+            function imgSize(image,height,width) // resize image
             {
-                document.getElementById("img1").style.width = "75px";
-                document.getElementById("img1").style.height = "75px";            
-                document.getElementById("img2").style.width = "75px";
-                document.getElementById("img2").style.height = "75px";            
-                document.getElementById("img3").style.width = "75px";
-                document.getElementById("img3").style.height = "75px";            
-                document.getElementById("img4").style.width = "75px";
-                document.getElementById("img4").style.height = "75px";                            
+                document.getElementById(image).style.width = height;
+                document.getElementById(image).style.height = width;            
             }
-        
+
+            function reset() // reset icons to normal size
+            {
+                imgSize("img1","75px","75px");
+                imgSize("img2","75px","75px");
+                imgSize("img3","75px","75px");
+                imgSize("img4","75px","75px");
+            }
+ 
+            function display_image(image,link,format,position)
+            {
+                document.getElementById(image).style.backgroundImage = link;
+                document.getElementById(image).style.backgroundSize = format;
+                document.getElementById(image).style.backgroundPosition = position;                
+            }
+ 
             document.getElementById("img1").addEventListener("click", function(){     
                 reset();
-                document.getElementById("img1").style.width = "100px";
-                document.getElementById("img1").style.height = "100px";            
-                document.getElementById("infoimg").style.backgroundImage = "url(1.png)";
-                document.getElementById("infoimg").style.backgroundSize = "cover";
-                document.getElementById("infoimg").style.backgroundPosition = "center center";
+                imgSize("img1","100px","100px");
+                display_image("infoimg","url(1.png)","cover","center center")
                 document.getElementById("info").style.opacity = "1";
                 document.getElementById("infotext").innerHTML = "Painting found in the weird mansion.";
             });
             
             document.getElementById("img2").addEventListener("click", function(){
                 reset();
-                document.getElementById("img2").style.width = "100px";
-                document.getElementById("img2").style.height = "100px";            
-                document.getElementById("infoimg").style.backgroundImage = "url(2.png)";
-                document.getElementById("infoimg").style.backgroundSize = "cover";
-                document.getElementById("infoimg").style.backgroundPosition = "center center";
+                imgSize("img2","100px","100px");
+                display_image("infoimg","url(2.png)","cover","center center")
                 document.getElementById("info").style.opacity = "1";
                 document.getElementById("infotext").innerHTML = "Creepy psychotic maniac.";
             });
             
             document.getElementById("img3").addEventListener("click", function(){
                 reset();
-                document.getElementById("img3").style.width = "100px";
-                document.getElementById("img3").style.height = "100px";            
-                document.getElementById("infoimg").style.backgroundImage = "url(3.png)";
-                document.getElementById("infoimg").style.backgroundSize = "cover";
-                document.getElementById("infoimg").style.backgroundPosition = "center center";
+                imgSize("img3","100px","100px");
+                display_image("infoimg","url(3.png)","cover","center center")
                 document.getElementById("info").style.opacity = "1";
                 document.getElementById("infotext").innerHTML = "Where you live (hopefully).";
             });
             
             document.getElementById("img4").addEventListener("click", function(){
                 reset();
-                document.getElementById("img4").style.width = "100px";
-                document.getElementById("img4").style.height = "100px";            
-                document.getElementById("infoimg").style.backgroundImage = "url(4.png)";
-                document.getElementById("infoimg").style.backgroundSize = "cover";
-                document.getElementById("infoimg").style.backgroundPosition = "center center";
+                imgSize("img4","100px","100px");
+                display_image("infoimg","url(4.png)","cover","center center")
                 document.getElementById("info").style.opacity = "1";
                 document.getElementById("infotext").innerHTML = "A beautiful sunset.";
             });
