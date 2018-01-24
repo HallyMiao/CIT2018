@@ -109,7 +109,7 @@
         </div>
         
         <script>
-            function imgSize(image,height,width) // resize image
+            function img_size(image,height,width) // resize image
             {
                 document.getElementById(image).style.width = height;
                 document.getElementById(image).style.height = width;            
@@ -117,54 +117,61 @@
 
             function reset() // reset icons to normal size
             {
-                imgSize("img1","75px","75px");
-                imgSize("img2","75px","75px");
-                imgSize("img3","75px","75px");
-                imgSize("img4","75px","75px");
+                img_size("img1","75px","75px");
+                img_size("img2","75px","75px");
+                img_size("img3","75px","75px");
+                img_size("img4","75px","75px");
             }
  
-            function display_image(image,link,format,position)
+            function display_image(image,link,format,position) // load up image
             {
                 document.getElementById(image).style.backgroundImage = link;
                 document.getElementById(image).style.backgroundSize = format;
                 document.getElementById(image).style.backgroundPosition = position;                
             }
  
+            function display_info(text) // display stuff in the big panel
+            {
+                if (text == 0) // turn panel invisible if value is 0
+                {
+                    document.getElementById("info").style.opacity = "0";
+                    return null;
+                }
+                document.getElementById("info").style.opacity = "1";
+                document.getElementById("infotext").innerHTML = text;
+            }
+            
             document.getElementById("img1").addEventListener("click", function(){     
                 reset();
-                imgSize("img1","100px","100px");
-                display_image("infoimg","url(1.png)","cover","center center")
-                document.getElementById("info").style.opacity = "1";
-                document.getElementById("infotext").innerHTML = "Painting found in the weird mansion.";
+                img_size("img1","100px","100px");
+                display_image("infoimg","url(1.png)","cover","center center");
+                display_info("Painting found in the weird mansion.");
             });
             
             document.getElementById("img2").addEventListener("click", function(){
                 reset();
-                imgSize("img2","100px","100px");
-                display_image("infoimg","url(2.png)","cover","center center")
-                document.getElementById("info").style.opacity = "1";
-                document.getElementById("infotext").innerHTML = "Creepy psychotic maniac.";
+                img_size("img2","100px","100px");
+                display_image("infoimg","url(2.png)","cover","center center");
+                display_info("Creepy psychotic maniac.");
             });
             
             document.getElementById("img3").addEventListener("click", function(){
                 reset();
-                imgSize("img3","100px","100px");
-                display_image("infoimg","url(3.png)","cover","center center")
-                document.getElementById("info").style.opacity = "1";
-                document.getElementById("infotext").innerHTML = "Where you live (hopefully).";
+                img_size("img3","100px","100px");
+                display_image("infoimg","url(3.png)","cover","center center");
+                display_info("Where you live (hopefully).");
             });
             
             document.getElementById("img4").addEventListener("click", function(){
                 reset();
-                imgSize("img4","100px","100px");
-                display_image("infoimg","url(4.png)","cover","center center")
-                document.getElementById("info").style.opacity = "1";
-                document.getElementById("infotext").innerHTML = "A beautiful sunset.";
+                img_size("img4","100px","100px");
+                display_image("infoimg","url(4.png)","cover","center center");
+                display_info("A beautiful sunset.");
             });
             
             document.getElementById("close").addEventListener("click", function(){
                 reset();
-                document.getElementById("info").style.opacity = 0;
+                display_info(0);
             });
         </script>
     </body>
