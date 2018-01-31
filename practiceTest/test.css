@@ -19,16 +19,19 @@
     width:30vw;
     height:30vh;
     text-align:center;
+    transition:right 0.2s, bottom 0.2s;
 }
 
 #img1 {
     height:30vh;
+    transition:height 0.2s;
 }
 
 .button {
     margin:auto;
     position:absolute;
-    border-radius:4px; 
+    border-radius:4px;
+    cursor:pointer;
 }
 
 #buttons {
@@ -88,7 +91,7 @@
     top:0px;
     right:-75px;
     width:75px;
-    transition: right 1s;
+    transition:right 1s;
 }
 
 #menuButton {
@@ -108,8 +111,43 @@
     right:100px;
     width:150px;
     height:auto;
+    transition:left 0.2s, right 0.2s, top 0.2s, bottom 0.2s, width 0.2s;
 }
 
 html, body {
     overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#but1, #but2, #but3 {
+    border-radius:4px;
+}
+
+#upB {
+    right:0px;
+    top:245px;
+}
+
+#downB {
+    top:275px;
+}
+
+#leftB {
+    top:305px;
+}
+
+#rightB {
+    top:335px;
+}
+
+#plusB, #minusB {
+    top:365px;
+}
+
+#plusB {
+    right:40px;
+}
+
+#minusB {
+    right:5px;
 }
