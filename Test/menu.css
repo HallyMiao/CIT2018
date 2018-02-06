@@ -1,0 +1,32 @@
+#menu {
+    position:absolute;
+    top:50px;
+    left:-110px;
+    width:100px;
+    padding:5px;
+    background-color:red;
+    transition:left 1s;
+}
+
+#MakeBG, #Reset, #HideApp, #ShowApp {
+    width:100px;
+}
+
+#Open, #Close {
+    position:absolute;
+    width:50px;
+    right:-50px;
+}
+
+#Open {
+    top:0px;
+}
+
+#Close {
+    bottom:0px;
+}
+
+html, body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}

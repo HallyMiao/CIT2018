@@ -1,0 +1,61 @@
+#app1 {
+    position:fixed;
+    width:70vw;
+    height:70vh;
+    margin:auto;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+}
+
+#zoom {
+    position:relative;
+    width:100%;
+    height:70%;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    margin-bottom:10px;
+    max-width:100%;
+    max-height:70%;
+}
+
+#zoomControls {
+    position:absolute;
+    right:0px;
+    top:0px;
+    width:75px;
+    display:none;
+}
+
+#plus, #minus {
+    width:100%;
+}
+
+#controls {
+    text-align:center;
+}
+
+.bgthumbs {
+    display:inline-block;
+    width:75px;
+    height:75px;
+    margin:5px;
+    border-radius:100px;
+    border:2px solid #ABC;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
+#bg {
+    position:fixed;
+    left:0px;
+    top:0px;
+    width:100vw;
+    height:100vh;
+    z-index:-1;
+    background-size:cover;
+    background-position:bottom;
+}
