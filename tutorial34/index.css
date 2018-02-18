@@ -1,0 +1,23 @@
+#menu {
+    border-bottom:1px solid #CCC;
+    padding:5px;
+    text-align:right;
+}
+
+#controls {
+    position:fixed;
+    bottom:0px;
+    right:0px;
+    padding:5px;
+}
+
+#display {
+    width:70vw;
+    height:50vh;
+    position:fixed;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    margin:auto;
+}

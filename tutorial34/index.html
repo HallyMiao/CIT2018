@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tutorial 3</title>
+        <link href="index.css" rel="stylesheet" type="text/css" />
+    </head>
+    
+    <body>
+        <div id="menu">
+            <a href="index.html">Background</a>
+            <a href="page2.html">Page 2</a>
+        </div>
+        
+        <div id="controls">
+            <input type="text" id="bgText" placeholder="Type a color in here" />
+            <button id="change">Change Color</button>
+            <hr />
+            
+            <input type="number" min="0" max="255" value="0" id="red" />
+            <input type="number" min="0" max="255" value="0" id="green" />
+            <input type="number" min="0" max="255" value="0" id="blue" />
+            <hr />
+            
+            <input type="range" min="0" max="255" value="0" id="rred" />
+            <input type="range" min="0" max="255" value="0" id="rgreen" />
+            <input type="range" min="0" max="255" value="0" id="rblue" />     
+            <hr />
+            
+            <input type="color" id="colorInp" />
+        </div>
+        
+        <div id="display"></div>
+        
+        <script src="index.js"></script>
+    </body>
+</html>
