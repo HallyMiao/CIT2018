@@ -1,0 +1,66 @@
+#controls {
+    position:absolute;
+    width:100px;
+    text-align:center;
+    bottom:-138px;
+    left:0px;
+    right:0px;
+    margin:auto;
+    transition:bottom 0.5s;
+    z-index:50;
+}
+
+#menu {
+    width:100%;
+}
+
+#BgImg {
+    width:100%;
+}
+
+#TitleC {
+    width:100%;
+}
+
+#DesC {
+    width:100%;
+    height:50px;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+#display {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100vw;
+}
+
+#display2 {
+    position:absolute;
+    top:300px;
+    width:100vw;
+}
+
+.backgrounds {
+    position:relative;
+    width:100%;
+    height:300px;
+    background-size:cover;
+}
+
+.DisplayTitle {
+    position:absolute;
+    left:10%;
+    top:10%;
+    border-bottom:3px solid grey;
+    font-size:140%
+}
+
+.DisplayDesc {
+    position:absolute;
+    left:10%;
+    top:20%;
+}
