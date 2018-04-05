@@ -1,0 +1,24 @@
+.slider {
+    width:40px;
+}
+
+#number {
+    color:white;
+    background-color:black;
+}
+
+#random {
+    color:gray;
+    background-color:pink;
+}
+
+#plus {
+    color:white;
+    background-color:gray;
+}
+
+.dispImg {
+    height:100px !important;
+    width:100px !important;
+    position:relative;
+}
